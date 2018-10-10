@@ -1,13 +1,12 @@
 package com.ricardosalguero.stackoverflowusers.ui.userlist;
 
 import android.content.Context;
+import android.widget.Toast;
 
 import com.ricardosalguero.stackoverflowusers.model.StackOverFlowResponse;
 import com.ricardosalguero.stackoverflowusers.model.User;
 import com.ricardosalguero.stackoverflowusers.rest.APIClient;
 import com.ricardosalguero.stackoverflowusers.rest.UserEndPoints;
-
-import org.json.JSONArray;
 
 import java.util.List;
 
@@ -26,12 +25,7 @@ public class UserListPresenter implements UserListContract.Actions {
         getUsers();
     }
 
-
     @Override
-    public void parseJson(JSONArray json) {
-
-    }
-
     public void getUsers(){
         UserEndPoints apiService = APIClient.getStackOverFLowClient().create(UserEndPoints.class);
         Call<StackOverFlowResponse> call = apiService.getUsers();
@@ -44,7 +38,8 @@ public class UserListPresenter implements UserListContract.Actions {
 
             @Override
             public void onFailure(Call<StackOverFlowResponse> call, Throwable t) {
-
+                t.printStackTrace();
+                Toast.makeText(context, "Error retrieving users.", Toast.LENGTH_LONG).show();
             }
         });
     }

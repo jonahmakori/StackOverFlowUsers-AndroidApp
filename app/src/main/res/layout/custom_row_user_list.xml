@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background_white"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="4dp"
+    card_view:cardPreventCornerOverlap="true"
+    card_view:cardUseCompatPadding="true">
+
+<RelativeLayout
     android:layout_width="fill_parent"
     android:layout_height="wrap_content">
 
@@ -36,38 +48,46 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/line1"
         android:paddingLeft="5dp"
+        android:paddingTop="5dp"
         android:layout_toRightOf="@id/gravatarImageView"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/goldBadgeImageView"
+            android:src="@drawable/gold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
+            android:padding="2dp"
             android:id="@+id/goldBadgeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <ImageView
             android:id="@+id/silverBadgeImageView"
+            android:src="@drawable/silver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
+            android:padding="2dp"
             android:id="@+id/silverBadgeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <ImageView
             android:id="@+id/bronzeBadgeImageView"
+            android:src="@drawable/bronze"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <TextView
+            android:padding="2dp"
             android:id="@+id/bronzeBadgeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
 </RelativeLayout>
+</android.support.v7.widget.CardView>

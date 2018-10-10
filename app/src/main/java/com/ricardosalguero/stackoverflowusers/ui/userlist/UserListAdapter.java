@@ -53,11 +53,11 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
 
         Iterator<Map.Entry<String, Integer>> iterator = user.getBadges().entrySet().iterator();
         Map.Entry<String, Integer> entry = iterator.next();
-        holder.goldBadgeTextView.setText(Integer.toString(entry.getValue()));
-        entry = iterator.next();
         holder.silverBadgeTextView.setText(Integer.toString(entry.getValue()));
         entry = iterator.next();
         holder.bronzeBadgeTextView.setText(Integer.toString(entry.getValue()));
+        entry = iterator.next();
+        holder.goldBadgeTextView.setText(Integer.toString(entry.getValue()));
 
 
         Glide.with(context)

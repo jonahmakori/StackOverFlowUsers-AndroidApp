@@ -2,7 +2,6 @@ package com.ricardosalguero.stackoverflowusers.ui.userlist;
 
 import com.ricardosalguero.stackoverflowusers.model.User;
 
-import org.json.JSONArray;
 
 import java.util.List;
 
@@ -13,6 +12,6 @@ public class UserListContract {
     }
 
     interface Actions {
-        void parseJson(JSONArray json);
+        void getUsers();
     }
 }
