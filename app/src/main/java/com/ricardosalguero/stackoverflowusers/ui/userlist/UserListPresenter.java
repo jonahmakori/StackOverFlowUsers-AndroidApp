@@ -39,7 +39,7 @@ public class UserListPresenter implements UserListContract.Actions {
             @Override
             public void onResponse(Call<StackOverFlowResponse> call, Response<StackOverFlowResponse> response) {
                 List<User> list = response.body().getUsers();
-                //view.showUsers(list);
+                view.showUsers(list);
             }
 
             @Override

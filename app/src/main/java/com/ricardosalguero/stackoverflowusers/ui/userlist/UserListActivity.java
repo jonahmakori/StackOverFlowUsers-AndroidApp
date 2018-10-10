@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.ricardosalguero.stackoverflowusers.R;
 import com.ricardosalguero.stackoverflowusers.model.User;
@@ -42,6 +43,7 @@ public class UserListActivity extends AppCompatActivity implements UserListContr
     @Override
     public void showUsers(List<User> list) {
         shimmerViewContainer.stopShimmerAnimation();
+        shimmerViewContainer.setVisibility(View.GONE);
         userListAdapter.setUserList(list);
     }
 }
