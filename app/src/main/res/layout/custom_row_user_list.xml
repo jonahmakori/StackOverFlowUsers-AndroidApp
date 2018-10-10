@@ -19,7 +19,6 @@
         android:id="@+id/gravatarImageView"
         android:layout_width="@dimen/profile_image_size"
         android:layout_height="@dimen/profile_image_size"
-        android:background="@mipmap/ic_launcher"
         android:visibility="visible" />
 
     <LinearLayout

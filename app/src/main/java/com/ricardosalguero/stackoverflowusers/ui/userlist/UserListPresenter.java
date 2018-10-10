@@ -25,6 +25,9 @@ public class UserListPresenter implements UserListContract.Actions {
         getUsers();
     }
 
+    /**
+     * Gets a retrofit client to connect to stackoverflow. Retrives the users and passes the list to the view.
+     */
     @Override
     public void getUsers(){
         UserEndPoints apiService = APIClient.getStackOverFLowClient().create(UserEndPoints.class);

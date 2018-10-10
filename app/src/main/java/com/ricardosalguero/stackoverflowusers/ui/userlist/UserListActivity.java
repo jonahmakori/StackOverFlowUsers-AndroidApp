@@ -31,6 +31,7 @@ public class UserListActivity extends AppCompatActivity implements UserListContr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userlist);
         ButterKnife.bind(this);
+        //show loading screen
         shimmerViewContainer.startShimmerAnimation();
 
         List<User> list = new ArrayList<>();
